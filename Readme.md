@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Игорь Кот](https://up.htmlacademy.ru/htmlcss/28/user/631113).
-* Наставник: `Сергей Зубов`.
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
 
 ---
 
