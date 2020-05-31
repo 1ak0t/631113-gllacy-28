@@ -11,7 +11,15 @@
     <img src="img/logo.svg" width="154" height="64" alt="Логотип">
     <nav>
       <ul>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="catalog.html">Каталог</a>
+          <ul>
+            <li><a href="">Новинки</a></li>
+            <li><a href="">Сливочное</a></li>
+            <li><a href="">Щербеты</a></li>
+            <li><a href="">Фруктовый лед</a></li>
+            <li><a href="">Мелорин</a></li>
+          </ul>
+        </li>
         <li><a href="">Доставка и oплата</a></li>
         <li><a href="">О компании</a></li>
       </ul>
@@ -21,6 +29,22 @@
     <button type="button">Корзина</button>
     <span>с 10 до 20, ежедневно</span>
     <a href="tel:88124502525">8 812 450-25-25</a>
+    <form action="https://echo.htmlacademy.ru" method="GET">
+      <label for="search-field" class="vissualy-hidden">Поиск</label>
+      <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
+      <button type="submit" class="vissualy-hidden">Отправить</button>
+    </form>
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <label for="login-field" class="vissualy-hidden">Логин</label>
+      <input type="email" name="login" id="login-field" placeholder="email@example.com">
+      <label for="password-field" class="vissualy-hidden">Пароль</label>
+      <input type="password" name="password" id="password-field" placeholder="******">
+      <div><button type="submit">Войти</button></div>
+      <div>
+        <a href="">Забыли пароль?</a>
+        <a href="">Новая регистрация</a>
+      </div>
+    </form>
   </header>
   <main>
     <h1>Главная страница</h1>
@@ -121,6 +145,16 @@
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="108" height="39" alt="Логотип разработчика"></a>
     <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
   </footer>
+  <form action="https://echo.htmlacademy.ru" method="POST">
+    <h2>Мы обязательно вам ответим!</h2>
+    <button type="button">X</button>
+    <label for="name-field" class="vissualy-hidden">Имя Фамилия</label>
+    <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+    <label for="email-field" class="vissualy-hidden">E-mail</label>
+    <input type="email" name="email" id="email-field" placeholder="email@example.com">
+    <textarea name="message" id="message-field" cols="30" rows="10" placeholder="В свободной форме" aria-label="Текст сообщения"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
 </body>
 
 </html>
