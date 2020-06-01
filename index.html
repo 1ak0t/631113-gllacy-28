@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин мороженного Gllacy</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -11,10 +12,10 @@
     <img src="img/logo.svg" width="154" height="64" alt="Логотип">
     <nav>
       <ul>
-        <li><a href="catalog.html">Каталог</a>
+        <li><a href="">Каталог</a>
           <ul>
             <li><a href="">Новинки</a></li>
-            <li><a href="">Сливочное</a></li>
+            <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="">Щербеты</a></li>
             <li><a href="">Фруктовый лед</a></li>
             <li><a href="">Мелорин</a></li>
@@ -24,27 +25,31 @@
         <li><a href="">О компании</a></li>
       </ul>
     </nav>
-    <button type="button">Поиск</button>
-    <button type="button">Вход</button>
-    <button type="button">Корзина</button>
+    <div>
+      <button type="button">Поиск</button>
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <label for="search-field" class="vissualy-hidden">Поиск</label>
+        <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
+        <button type="submit" class="vissualy-hidden">Отправить</button>
+      </form>
+    </div>
+    <div>
+      <button type="button">Войти</button>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <label for="login-field" class="vissualy-hidden">Логин</label>
+        <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
+        <label for="password-field" class="vissualy-hidden">Пароль</label>
+        <input type="password" name="password" id="password-field" placeholder="******" required>
+        <button type="submit">Войти</button>
+        <div>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </div>
+      </form>
+    </div>
+    <button type="button">Пусто</button>
     <span>с 10 до 20, ежедневно</span>
     <a href="tel:88124502525">8 812 450-25-25</a>
-    <form action="https://echo.htmlacademy.ru" method="GET">
-      <label for="search-field" class="vissualy-hidden">Поиск</label>
-      <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
-      <button type="submit" class="vissualy-hidden">Отправить</button>
-    </form>
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <label for="login-field" class="vissualy-hidden">Логин</label>
-      <input type="email" name="login" id="login-field" placeholder="email@example.com">
-      <label for="password-field" class="vissualy-hidden">Пароль</label>
-      <input type="password" name="password" id="password-field" placeholder="******">
-      <div><button type="submit">Войти</button></div>
-      <div>
-        <a href="">Забыли пароль?</a>
-        <a href="">Новая регистрация</a>
-      </div>
-    </form>
   </header>
   <main>
     <h1>Главная страница</h1>
@@ -151,8 +156,8 @@
     <label for="name-field" class="vissualy-hidden">Имя Фамилия</label>
     <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
     <label for="email-field" class="vissualy-hidden">E-mail</label>
-    <input type="email" name="email" id="email-field" placeholder="email@example.com">
-    <textarea name="message" id="message-field" cols="30" rows="10" placeholder="В свободной форме" aria-label="Текст сообщения"></textarea>
+    <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+    <textarea name="message" id="message-field" cols="30" rows="10" placeholder="В свободной форме" aria-label="Текст сообщения" required></textarea>
     <button type="submit">Отправить</button>
   </form>
 </body>
