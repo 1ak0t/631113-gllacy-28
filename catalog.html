@@ -79,6 +79,43 @@
 	</header>
 	<main>
 		<h1>Сливочное мороженое</h1>
+		<form action="https://echo.htmlacademy.ru" method="GET" oninput="costselect.value=costrange.value;">
+			<label for="sort-field">Сортировка:</label>
+			<select name="sort" id="sort-field">
+				<option value="popularity">по популярности</option>
+				<option value="cheap-first">сначала недорогие</option>
+				<option value="expansive-first">сначала дорогие</option>
+				<option value="fat-contant">по жирности</option>
+			</select>
+			<label for="cost-range-field">Цена: <output name="costselect">100</output> ₽ – 500 ₽</label>
+			<input type="range" name="costrange" id="cost-range-field" min="100" max="500" step="5" value="100">
+			<!-- Чтоб работало 2 ползунка - потом добавлю JavaScript-->
+			<fieldset>
+				<legend>Жирность:</legend>
+				<label for="0">0%</label>
+				<input type="radio" name="filter-fat" id="0" value="0">
+				<label for="10">до 10%</label>
+				<input type="radio" name="filter-fat" id="10" value="10">
+				<label for="30">до 30%</label>
+				<input type="radio" name="filter-fat" id="30" value="30">
+				<label for="30+">выше 30%</label>
+				<input type="radio" name="filter-fat" id="30+" value="30+">
+			</fieldset>
+			<fieldset>
+				<legend>Наполнители:</legend>
+				<input type="checkbox" name="filter-chocolate" id="filter-chocolate-field">
+				<label for="filter-chocolate-field">шоколадные</label>
+				<input type="checkbox" name="filter-sugar" id="filter-sugar-field">
+				<label for="filter-sugar-field">сахарные присыпки</label>
+				<input type="checkbox" name="filter-fruit" id="filter-fruit-field">
+				<label for="filter-fruit-field">фрукты</label>
+				<input type="checkbox" name="filter-syrup" id="filter-syrup-field">
+				<label for="filter-syrup-field">сиропы</label>
+				<input type="checkbox" name="filter-jam" id="filter-jam-field">
+				<label for="filter-jam-field">джемы</label>
+			</fieldset>
+			<button type="submit">Применить</button>
+		</form>
 		<section>
 			<h2>Каталог мороженого</h2>
 			<ul>
