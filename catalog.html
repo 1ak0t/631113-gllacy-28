@@ -79,7 +79,7 @@
 	</header>
 	<main>
 		<h1>Сливочное мороженое</h1>
-		<form action="https://echo.htmlacademy.ru" method="GET" oninput="costselect.value=costrange.value;">
+		<form action="https://echo.htmlacademy.ru" method="GET">
 			<label for="sort-field">Сортировка:</label>
 			<select name="sort" id="sort-field">
 				<option value="popularity">по популярности</option>
@@ -87,9 +87,9 @@
 				<option value="expansive-first">сначала дорогие</option>
 				<option value="fat-contant">по жирности</option>
 			</select>
-			<label for="cost-range-field">Цена: <output name="costselect">100</output> ₽ – 500 ₽</label>
-			<input type="range" name="costrange" id="cost-range-field" min="100" max="500" step="5" value="100">
-			<!-- Чтоб работало 2 ползунка - потом добавлю JavaScript-->
+			<label for="mincost-range-field">Цена: 100 ₽ – 500 ₽</label>
+			<input type="range" name="costrange" id="mincost-range-field" min="100" max="250" step="10" value="100">
+			<input type="range" name="costrange" id="maxcost-range-field" min="250" max="500" step="10" value="500">
 			<fieldset>
 				<legend>Жирность:</legend>
 				<label for="0">0%</label>
