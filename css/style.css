@@ -1,0 +1,58 @@
+:root {
+  --bg-color-green: #849D8F;
+  --bg-color-blue: #8996A6;
+  --bg-color-brown: #9D8B84;
+
+  --button-high: #F26843;
+  --button-low:  #E74A35;
+
+  --menu-hover: #FBDED7;
+  --menu-active: #F6B5A5;
+  --menu-on-page: #D07058;
+
+  --general-white: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+body {
+  margin: 0;
+  padding: 0 27px;
+  width: 1200px;
+  background-color: var(--bg-color-green);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+a {
+  color: var(--general-white);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  width: 154px;
+  height: 65px;
+  margin: 8px;
+}
+
+.main-menu {
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-menu-link {
+  margin: 0 16px;
+}
