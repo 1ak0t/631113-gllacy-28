@@ -60,16 +60,12 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-menu-link:hover,
-.main-menu-link:focus {
-  background-color: var(--general-white);
-  border-radius: 26px;
-  padding: 6px 13px 8px 13px; 
-}
-
 .main-menu-link:hover>a,
 .main-menu-link:focus>a {
   color: var(--general-black);
+  background-color: var(--general-white);
+  border-radius: 26px;
+  padding: 6px 13px 8px 13px; 
 }
 
 .main-menu-link:active>a {
@@ -108,7 +104,55 @@ a {
   display: block;
 }
 
+.login-button {
+  position: relative;
+  display: inline-block;
+}
+
+.login-button button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--general-white);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 92px;
+  height: 32px;
+  border-radius: 20px;
+  border: 0px;
+  padding-left: 44px;
+  padding-right: 16px;
+}
+
+.login-icon {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/icon-login.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-button:hover button,
+.login-button:focus button {
+  background-color: var(--general-white);
+  color: var(--general-black);
+  cursor: pointer;
+}
+
+.login-button:hover .login-icon,
+.login-button:focus .login-icon {
+  background-image: url(/img/icon-login-active.svg);
+  cursor: pointer;
+}
 
 .login-form {
   display: none;
+}
+
+.login-button:hover + .login-form,
+.login-button:focus + .login-form {
+  display: block;
 }
