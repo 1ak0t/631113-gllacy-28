@@ -40,6 +40,12 @@ a {
   text-decoration: none;
 }
 
+.clear-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .logo {
   width: 154px;
   height: 65px;
@@ -51,25 +57,21 @@ a {
   line-height: 18px;
 }
 
-.main-menu ul {
-  list-style: none;
-}
-
 .main-menu-link {
   margin: 0 16px;
   display: inline-block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-menu-link:hover>a,
-.main-menu-link:focus>a {
+.main-menu-link:hover a,
+.main-menu-link:focus a {
   color: var(--general-black);
   background-color: var(--general-white);
   border-radius: 26px;
   padding: 6px 13px 8px 13px; 
 }
 
-.main-menu-link:active>a {
+.main-menu-link:active a {
   background: #EDEDED;
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
@@ -82,10 +84,6 @@ a {
   line-height: 31px;
   font-weight: bold;
   border-radius: 26px;
-}
-
-.search-block {
-  display: inline;
 }
 
 .search-button {
@@ -120,12 +118,15 @@ a {
 }
 
 .login-button button {
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   color: var(--general-white);
   background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(/img/icon-login.svg);
+  background-repeat: no-repeat;
+  background-position: 23% 50%;
   width: 92px;
   height: 32px;
   border-radius: 20px;
@@ -134,28 +135,12 @@ a {
   padding-right: 16px;
 }
 
-.login-icon {
-  position: absolute;
-  left: 16px;
-  top: 6px;
-  width: 20px;
-  height: 20px;
-  background-image: url(/img/icon-login.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .login-button:hover button,
 .login-button:focus button {
   background-color: var(--general-white);
   color: var(--general-black);
   cursor: pointer;
-}
-
-.login-button:hover .login-icon,
-.login-button:focus .login-icon {
   background-image: url(/img/icon-login-active.svg);
-  cursor: pointer;
 }
 
 .cart-button {
@@ -170,6 +155,9 @@ a {
   font-weight: 500;
   color: var(--general-white);
   background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(/img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
   width: 100px;
   height: 32px;
   border-radius: 20px;
@@ -178,54 +166,29 @@ a {
   padding-right: 16px;
 }
 
-.cart-icon {
-  position: absolute;
-  left: 16px;
-  top: 6px;
-  width: 20px;
-  height: 20px;
-  background-image: url(/img/icon-cart.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .cart-button:hover button,
 .cart-button:focus button {
   background-color: var(--general-white);
+  background-image: url(/img/icon-cart-active.svg);
   color: var(--general-black);
   cursor: pointer;
 }
 
-.cart-button:hover .cart-icon,
-.cart-button:focus .cart-icon {
-  background-image: url(/img/icon-cart-active.svg);
-  cursor: pointer;
-}
-
 .login-form {
-  display: none;
-}
-
-.login-button:hover + .login-form,
-.login-button:focus + .login-form {
   display: block;
 }
 
-.tel {
+.tel-header {
   font-size: 22px;
   font-weight: bold;
   line-height: 24px;
-}
-
-.breadcrumbs {
-  list-style: none;
 }
 
 .breadcrumbs li {
   display: inline-block;
 }
 
-.breadcrumbs li>a {
+.breadcrumbs a {
   text-decoration-line: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
@@ -280,7 +243,7 @@ a {
   border-radius: 70px;
 }
 
-.slider-dot button{
+.slider-dot button {
   display: inline-block;
   width: 21px;
   height: 21px;
@@ -307,13 +270,13 @@ a {
   position: relative;
 }
 
-.stok.raspberry {
-  background: url("/img/bg-raspberry.jpg") no-repeat;
+.raspberry {
+  background: url(/img/bg-raspberry.jpg) no-repeat;
   background-size: cover;
 }
 
-.stok.chocolate {
-  background: url("/img/bg-chocolate.jpg") no-repeat;
+.chocolate {
+  background: url(/img/bg-chocolate.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -329,22 +292,13 @@ a {
 }
 
 .stok-button {
-  width: 164px;
-  height: 48px;
+  padding: 15px 22px;
   font-size: 18px;
-  line-height: 48px;
+  line-height: 18px;
   border-radius: 70px;
   position: absolute;
   right: 22px;
   bottom: 22px;
-}
-
-.chocolate .stok-button {
-  width: 191px;
-}
-
-.catalog {
-  list-style: none;
 }
 
 .catalog-item {
@@ -353,7 +307,8 @@ a {
   position: relative;
 }
 
-.hover {
+.catalog-item::before {
+  content: "";
   position: absolute;
   top: -6px;
   left: -13px;
@@ -374,8 +329,8 @@ a {
 
 .catalog-item:hover .item-button,
 .catalog-item:focus .item-button,
-.catalog-item:hover .hover,
-.catalog-item:focus .hover{
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   display: block;
 }
 
@@ -383,10 +338,10 @@ a {
   width: 61px;
   height: 61px;
   position: absolute;
-  background: url("/img/hit.svg") no-repeat;
+  background: url(/img/hit.svg) no-repeat;
 }
 
-.catalog-item span {
+.price {
   position: absolute;
   top: 216px;
   left: 0;
@@ -394,22 +349,17 @@ a {
   font-weight: bold;
 }
 
-.catalog-item span>i {
+.price i {
   font-style: normal;
   font-size: 30px;
 }
 
-.catalog-item h3{
+.catalog-item h3 {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   text-align: center;
   margin: 13px 0;
-}
-
-.catalog-item h3>a {
-  text-decoration-line: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .item-button {
@@ -426,7 +376,7 @@ a {
 .features {
   width: 1146px;
   height: 306px;
-  background: url("/img/pattern.png");
+  background: url(/img/pattern.png);
   border-radius: 16px;
   padding-left: 20px;
   padding-top: 4px;
@@ -449,7 +399,7 @@ a {
 .blog-item {
   width: 560px;
   height: 220px;
-  background: url("/img/blog-bg.jpg") right center no-repeat;
+  background: url(/img/blog-bg.jpg) right center no-repeat;
   background-size: cover;
   border-radius: 16px;
   color: var(--general-black);
@@ -478,10 +428,10 @@ a {
   width: 560px;
   height: 220px;
   color: #5A5A5A;
-  background: url("/img/subscribe-bg.png") no-repeat;
+  background: url(/img/subscribe-bg.png) no-repeat;
 }
 
-.subscribe>div {
+.subscribe-block {
   background-color: #F8F7F4;
   border-radius: 16px;
   width: 548px;
@@ -527,7 +477,7 @@ a {
   position: absolute;
 }
 
-.address {
+.location {
   width: 303px;
   height: 306px;
   color: var(--general-black);
@@ -545,20 +495,20 @@ a {
   box-sizing: border-box;
 }
 
-.address address {
+.location address {
   font-size: inherit;
   font-style: inherit;
   line-height: inherit;
 }
 
-.address p>a {
+.location p>a {
   font-size: 18px;
   line-height: 24px;
   color: var(--general-black);
   font-weight: bold;
 }
 
-.address span {
+.location span {
   font-size: 18px;
   line-height: 24px;
   color: var(--general-black);
@@ -575,10 +525,6 @@ a {
   border-radius: 70px;
 }
 
-.social-buttons {
-  list-style: none;
-}
-
 .social-icon {
   display: block;
   width: 26px;
@@ -588,42 +534,38 @@ a {
 }
 
 .facebook {
-  background: url("/img/facebook.svg") center center no-repeat;
+  background: url(/img/facebook.svg) center center no-repeat;
   background-size: cover;
 }
 
 .vk {
-  background: url("/img/vk.svg") center center no-repeat;
+  background: url(/img/vk.svg) center center no-repeat;
   background-size: cover;
 }
 
 .instagram {
-  background: url("/img/instagram.svg") center center no-repeat;
+  background: url(/img/instagram.svg) center center no-repeat;
   background-size: cover;
 }
 
 .twitter {
-  background: url("/img/twitter.svg") center center no-repeat;
+  background: url(/img/twitter.svg) center center no-repeat;
   background-size: cover;
 }
 
-.bottom-menu {
-  list-style: none;
-}
-
-.bottom-menu a{
+.footer-menu a {
   display: inline-block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 13px;
   line-height: 18px;
 }
 
-.bottom-menu li:first-child::before {
+.footer-menu li:first-child::before {
   content: '';
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url("/img/heart.svg") center center no-repeat;
+  background: url(/img/heart.svg) center center no-repeat;
   margin-right: 7px;
 }
 
@@ -632,3 +574,23 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
