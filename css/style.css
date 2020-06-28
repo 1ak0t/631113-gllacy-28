@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), 
+      url(../fonts/Roboto-Regular.woff2) format('woff2'),
+      url(../fonts/Roboto-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), 
+      url(../fonts/Roboto-Bold.woff2) format('woff2'),
+      url(../fonts/Roboto-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+      url(../fonts/Roboto-Medium.woff2) format('woff2'),
+      url(../fonts/Roboto-Medium.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 :root {
   --bg-color-green: #849D8F;
   --bg-color-blue: #8996A6;
@@ -28,7 +60,7 @@ body {
   min-width: 1200px;
   background-color: var(--bg-color-brown);
   color: var(--general-white);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
@@ -92,7 +124,7 @@ a {
   border-radius: 16px;
   border: 0px;
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: url(/img/icon-search.svg);
+  background-image: url(../img/icon-search.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -100,7 +132,7 @@ a {
 .search-button:hover,
 .search-button:focus {
   background-color: var(--general-white);
-  background-image: url(/img/icon-search-active.svg);
+  background-image: url(../img/icon-search-active.svg);
   cursor: pointer;
 }
 
@@ -124,7 +156,7 @@ a {
   font-weight: 500;
   color: var(--general-white);
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: url(/img/icon-login.svg);
+  background-image: url(../img/icon-login.svg);
   background-repeat: no-repeat;
   background-position: 23% 50%;
   width: 92px;
@@ -140,7 +172,7 @@ a {
   background-color: var(--general-white);
   color: var(--general-black);
   cursor: pointer;
-  background-image: url(/img/icon-login-active.svg);
+  background-image: url(../img/icon-login-active.svg);
 }
 
 .cart-button {
@@ -149,13 +181,13 @@ a {
 }
 
 .cart-button button {
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   color: var(--general-white);
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: url(/img/icon-cart.svg);
+  background-image: url(../img/icon-cart.svg);
   background-repeat: no-repeat;
   background-position: 20% 50%;
   width: 100px;
@@ -169,7 +201,7 @@ a {
 .cart-button:hover button,
 .cart-button:focus button {
   background-color: var(--general-white);
-  background-image: url(/img/icon-cart-active.svg);
+  background-image: url(../img/icon-cart-active.svg);
   color: var(--general-black);
   cursor: pointer;
 }
@@ -198,7 +230,7 @@ a {
   display: inline-block;
   width: 6px;
   height: 6px;
-  background: url("/img/breadcrumbs-icon.svg") center center no-repeat;
+  background: url(../img/breadcrumbs-icon.svg) center center no-repeat;
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -271,12 +303,12 @@ a {
 }
 
 .raspberry {
-  background: url(/img/bg-raspberry.jpg) no-repeat;
+  background: url(../img/bg-raspberry.jpg) no-repeat;
   background-size: cover;
 }
 
 .chocolate {
-  background: url(/img/bg-chocolate.jpg) no-repeat;
+  background: url(../img/bg-chocolate.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -338,7 +370,7 @@ a {
   width: 61px;
   height: 61px;
   position: absolute;
-  background: url(/img/hit.svg) no-repeat;
+  background: url(../img/hit.svg) no-repeat;
 }
 
 .price {
@@ -376,7 +408,7 @@ a {
 .features {
   width: 1146px;
   height: 306px;
-  background: url(/img/pattern.png);
+  background: url(../img/pattern.png);
   border-radius: 16px;
   padding-left: 20px;
   padding-top: 4px;
@@ -399,7 +431,7 @@ a {
 .blog-item {
   width: 560px;
   height: 220px;
-  background: url(/img/blog-bg.jpg) right center no-repeat;
+  background: url(../img/blog-bg.jpg) right center no-repeat;
   background-size: cover;
   border-radius: 16px;
   color: var(--general-black);
@@ -428,7 +460,7 @@ a {
   width: 560px;
   height: 220px;
   color: #5A5A5A;
-  background: url(/img/subscribe-bg.png) no-repeat;
+  background: url(../img/subscribe-bg.png) no-repeat;
 }
 
 .subscribe-block {
@@ -496,12 +528,10 @@ a {
 }
 
 .location address {
-  font-size: inherit;
-  font-style: inherit;
-  line-height: inherit;
+  font: inherit;
 }
 
-.location p>a {
+.tel-location {
   font-size: 18px;
   line-height: 24px;
   color: var(--general-black);
@@ -534,22 +564,22 @@ a {
 }
 
 .facebook {
-  background: url(/img/facebook.svg) center center no-repeat;
+  background: url(../img/facebook.svg) center center no-repeat;
   background-size: cover;
 }
 
 .vk {
-  background: url(/img/vk.svg) center center no-repeat;
+  background: url(../img/vk.svg) center center no-repeat;
   background-size: cover;
 }
 
 .instagram {
-  background: url(/img/instagram.svg) center center no-repeat;
+  background: url(../img/instagram.svg) center center no-repeat;
   background-size: cover;
 }
 
 .twitter {
-  background: url(/img/twitter.svg) center center no-repeat;
+  background: url(../img/twitter.svg) center center no-repeat;
   background-size: cover;
 }
 
@@ -565,32 +595,11 @@ a {
   display: inline-block;
   width: 15px;
   height: 13px;
-  background: url(/img/heart.svg) center center no-repeat;
+  background: url(../img/heart.svg) center center no-repeat;
   margin-right: 7px;
 }
 
 .htmlacademy-link {
   display: inline-block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(/fonts/Roboto-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(/fonts/Roboto-Medium.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(/fonts/Roboto-Bold.ttf);
-  font-weight: bold;
-  font-style: normal;
 }
