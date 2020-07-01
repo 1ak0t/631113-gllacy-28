@@ -62,39 +62,43 @@
 	</header>
 	<main>
 		<h1>Сливочное мороженое</h1>
-		<form action="https://echo.htmlacademy.ru" method="GET">
-			<label for="sort-field">Сортировка:</label>
-			<select name="sort" id="sort-field">
+		<form class="filter" action="https://echo.htmlacademy.ru" method="GET">
+			<label class="filter-name" for="sort-field">Сортировка:</label>
+			<select class="filter-points sort" name="sort" id="sort-field">
 				<option value="popularity">по популярности</option>
 				<option value="cheap-first">сначала недорогие</option>
 				<option value="expansive-first">сначала дорогие</option>
 				<option value="fat-contant">по жирности</option>
 			</select>
-			<fieldset>
-				<legend>Жирность:</legend>
-				<label for="0">0%</label>
-				<input type="radio" name="filter-fat" id="0" value="0">
-				<label for="10">до 10%</label>
-				<input type="radio" name="filter-fat" id="10" value="10">
-				<label for="30">до 30%</label>
-				<input type="radio" name="filter-fat" id="30" value="30">
-				<label for="30+">выше 30%</label>
-				<input type="radio" name="filter-fat" id="30+" value="30-more">
+			<fieldset class="filter-block">
+				<legend class="filter-name">Жирность:</legend>
+				<div class="filter-points">
+					<input type="radio" name="filter-fat" id="0" value="0">
+					<label for="0">0%</label>
+					<input type="radio" name="filter-fat" id="10" value="10">
+					<label for="10">до 10%</label>
+					<input type="radio" name="filter-fat" id="30" value="30">
+					<label for="30">до 30%</label>
+					<input type="radio" name="filter-fat" id="30+" value="30-more">
+					<label for="30+">выше 30%</label>
+				</div>
 			</fieldset>
-			<fieldset>
-				<legend>Наполнители:</legend>
-				<input type="checkbox" name="filter-chocolate" id="filter-chocolate-field">
-				<label for="filter-chocolate-field">шоколадные</label>
-				<input type="checkbox" name="filter-sugar" id="filter-sugar-field">
-				<label for="filter-sugar-field">сахарные присыпки</label>
-				<input type="checkbox" name="filter-fruit" id="filter-fruit-field">
-				<label for="filter-fruit-field">фрукты</label>
-				<input type="checkbox" name="filter-syrup" id="filter-syrup-field">
-				<label for="filter-syrup-field">сиропы</label>
-				<input type="checkbox" name="filter-jam" id="filter-jam-field">
-				<label for="filter-jam-field">джемы</label>
+			<fieldset class="filter-block">
+				<legend class="filter-name">Наполнители:</legend>
+				<div class="filter-points">
+					<input type="checkbox" name="filter-chocolate" id="filter-chocolate-field">
+					<label for="filter-chocolate-field">шоколадные</label>
+					<input type="checkbox" name="filter-sugar" id="filter-sugar-field">
+					<label for="filter-sugar-field">сахарные присыпки</label>
+					<input type="checkbox" name="filter-fruit" id="filter-fruit-field">
+					<label for="filter-fruit-field">фрукты</label>
+					<input type="checkbox" name="filter-syrup" id="filter-syrup-field">
+					<label for="filter-syrup-field">сиропы</label>
+					<input type="checkbox" name="filter-jam" id="filter-jam-field">
+					<label for="filter-jam-field">джемы</label>
+				</div>
 			</fieldset>
-			<button type="submit">Применить</button>
+			<button  class="filter-button" type="submit">Применить</button>
 		</form>
 		<section>
 			<h2 class="visually-hidden" >Каталог мороженого</h2>
@@ -198,14 +202,14 @@
 			</ul>
 		</section>
 		<div>
-			<ul>
-				<li><a href="">&lt;</a></li>
-				<li>1</li>
+			<ul class="catalog-nav clear-list">
+				<li class="row-inactive"><a href=""></a></li>
+				<li class="current-page">1</li>
 				<li><a href="">2</a></li>
 				<li><a href="">3</a></li>
 				<li><a href="">4</a></li>
 				<li><a href="">5</a></li>
-				<li><a href="">&gt;</a></li>
+				<li class="row"><a href=""></a></li>
 			</ul>
 		</div>
 	</main>
