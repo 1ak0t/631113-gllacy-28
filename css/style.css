@@ -446,7 +446,7 @@ a {
   margin: 13px 0;
 }
 
-.catalog-nav li{
+.catalog-nav li {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -469,7 +469,7 @@ a {
   background: url(../img/icon-row-inactive.svg) center bottom no-repeat;
 }
 
-.catalog-nav li:not(:first-child):not(:last-child):hover{
+.catalog-nav li:not(:first-child):not(:last-child):hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
