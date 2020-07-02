@@ -8,10 +8,10 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header container">
     <img src="img/logo.svg" class="logo" width="154" height="65" alt="Логотип">
     <nav class="main-menu">
-      <ul class="clear-list">
+      <ul class="clear-list main-menu-items">
         <li class="main-menu-link"><a href="catalog.html">Каталог</a>
           <ul class="visually-hidden">
             <li ><a href="">Новинки</a></li>
@@ -25,37 +25,41 @@
         <li class="main-menu-link"><a href="">О компании</a></li>
       </ul>
     </nav>
-    <div class="search-block">
-      <button class="search-button" type="button"></button>
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-        <label for="search-field" class="vissualy-hidden">Поиск</label>
-        <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
-        <button type="submit" class="vissualy-hidden">Отправить</button>
-      </form>
-    </div>
-    <div>
-      <div class="login-button">
-				<button type="button">Вход</button>
-				<span class="login-icon"></span>
-			</div>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-        <label for="login-field" class="vissualy-hidden">Логин</label>
-        <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
-        <label for="password-field" class="vissualy-hidden">Пароль</label>
-        <input type="password" name="password" id="password-field" placeholder="******" required>
-        <button type="submit">Войти</button>
-        <div>
-          <a href="">Забыли пароль?</a>
-          <a href="">Новая регистрация</a>
+    <div class="header-buttons">
+      <div class="search-block">
+        <button class="search-button" type="button"></button>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
+          <label for="search-field" class="vissualy-hidden">Поиск</label>
+          <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
+          <button type="submit" class="vissualy-hidden">Отправить</button>
+        </form>
+      </div>
+      <div>
+        <div class="login-button">
+          <button type="button">Вход</button>
+          <span class="login-icon"></span>
         </div>
-      </form>
+        <form class="login-form visually-hidden" action="https://echo.htmlacademy.ru" method="POST">
+          <label for="login-field" class="vissualy-hidden">Логин</label>
+          <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
+          <label for="password-field" class="vissualy-hidden">Пароль</label>
+          <input type="password" name="password" id="password-field" placeholder="******" required>
+          <button type="submit">Войти</button>
+          <div>
+            <a href="">Забыли пароль?</a>
+            <a href="">Новая регистрация</a>
+          </div>
+        </form>
+      </div>
+      <div class="cart-button">
+        <button type="button">Пусто</button>
+        <span class="cart-icon"></span>
+      </div>
     </div>
-    <div class="cart-button">
-      <button type="button">Пусто</button>
-      <span class="cart-icon"></span>
+    <div class="header-contacts">
+      <span>с 10 до 20, ежедневно</span><br>
+      <a class="tel-header" href="tel:88124502525">8 812 450-25-25</a>
     </div>
-    <span>с 10 до 20, ежедневно</span><br>
-    <a class="tel" href="tel:88124502525">8 812 450-25-25</a>
   </header>
   <main>
     <h1 class="visually-hidden">Главная страница</h1>
@@ -116,32 +120,34 @@
         <div class="hover"></div>
       </article>
     </section>
-    <section class="features">
-      <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
-      <div class="left"><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
-        проверенных временем технологий.</p>
-      <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
-        ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></div>
-      <div class="right"><p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает
-        долговременное сотрудничество.</p>
-      <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому
-        растаять в пути и позволяет сохранить превосходный вкус.</p></div>
-    </section>
-    <article class="blog-item">
-        <h2>Новое в нашем блоге</h2>
-        <h3><a href="">10 способов сервировки<br> фруктовых щербетов к<br> столу</a></h3>
-    </article>
-    <form class="subscribe" action="https://echo.htmlacademy.ru" method="POST">
-      <div class="subscribe-block">
-        <h2 class="visually-hidden">Подпишись на рассылку</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <input type="email" name="subscribe" id="subscribe-field" required placeholder="email@example.com">
-        <button class="button-red" type="submit">Оправить</button>
-      </div>
-    </form>
+    <div class="cards-on-main container">
+      <section class="features">
+        <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
+        <div class="left"><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
+          проверенных временем технологий.</p>
+        <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
+          ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></div>
+        <div class="right"><p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает
+          долговременное сотрудничество.</p>
+        <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому
+          растаять в пути и позволяет сохранить превосходный вкус.</p></div>
+      </section>
+      <article class="blog-item">
+          <h2>Новое в нашем блоге</h2>
+          <h3><a href="">10 способов сервировки<br> фруктовых щербетов к<br> столу</a></h3>
+      </article>
+      <form class="subscribe" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="subscribe-block">
+          <h2 class="visually-hidden">Подпишись на рассылку</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <input type="email" name="subscribe" id="subscribe-field" required placeholder="email@example.com">
+          <button class="button-red" type="submit">Оправить</button>
+        </div>
+      </form>
+    </div>
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <img src="img/map.png" width="1200" height="430" alt="Карта проезда">
+      <img src="img/map.png" alt="Карта проезда">
       <div class="location">
         <address>
           <p>Адрес главного офиса<br> и офлайн-магазина:<br>
@@ -156,7 +162,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer container">
     <ul class="social-buttons clear-list">
       <li><a class="social-icon facebook" href="" aria-label="Facebook"></a></li>
       <li><a class="social-icon vk" href="" aria-label="VK"></a></li>
@@ -165,12 +171,14 @@
     </ul>
     <ul class="footer-menu clear-list">
       <li><a href="">Для поставщиков</a></li>
-      <li><a href="">О производстве</a></li>
       <li><a href="">Наши документы</a></li>
+      <li><a href="">О производстве</a></li>
       <li><a href="">Экологические стандарты</a></li>
     </ul>
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="108" height="39" alt="Логотип разработчика"></a>
-    <span>Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
+    <div class="copyright">
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="108" height="39" alt="Логотип разработчика"></a>
+      <span>Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
+    </div>
   </footer>
   <form class="visually-hidden" action="https://echo.htmlacademy.ru" method="POST">
     <h2>Мы обязательно вам ответим!</h2>

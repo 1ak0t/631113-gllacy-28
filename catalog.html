@@ -8,10 +8,10 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header container">
 		<img src="img/logo.svg" class="logo" width="154" height="65" alt="Логотип">
     <nav class="main-menu">
-      <ul class="clear-list">
+      <ul class="main-menu-items clear-list">
         <li class="main-menu-link"><a  class="catalog-button button-red" href="">Каталог</a>
           <ul class="visually-hidden">
             <li ><ahref="">Новинки</a></li>
@@ -25,40 +25,46 @@
         <li class="main-menu-link"><a href="">О компании</a></li>
       </ul>
     </nav>
-    <div class="search-block">
-      <button class="search-button" type="button"></button>
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-        <label for="search-field" class="vissualy-hidden">Поиск</label>
-        <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
-        <button type="submit" class="vissualy-hidden">Отправить</button>
-      </form>
-    </div>
-    <div>
-      <div class="login-button">
-				<button type="button">Вход</button>
-			</div>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-        <label for="login-field" class="vissualy-hidden">Логин</label>
-        <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
-        <label for="password-field" class="vissualy-hidden">Пароль</label>
-        <input type="password" name="password" id="password-field" placeholder="******" required>
-        <button type="submit">Войти</button>
-        <div>
-          <a href="">Забыли пароль?</a>
-          <a href="">Новая регистрация</a>
+    <div class="header-buttons">
+      <div class="search-block">
+        <button class="search-button" type="button"></button>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
+          <label for="search-field" class="vissualy-hidden">Поиск</label>
+          <input type="text" id="search-field" name="search" placeholder="Крем-брюле">
+          <button type="submit" class="vissualy-hidden">Отправить</button>
+        </form>
+      </div>
+      <div>
+        <div class="login-button">
+          <button type="button">Вход</button>
+          <span class="login-icon"></span>
         </div>
-      </form>
+        <form class="login-form visually-hidden" action="https://echo.htmlacademy.ru" method="POST">
+          <label for="login-field" class="vissualy-hidden">Логин</label>
+          <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
+          <label for="password-field" class="vissualy-hidden">Пароль</label>
+          <input type="password" name="password" id="password-field" placeholder="******" required>
+          <button type="submit">Войти</button>
+          <div>
+            <a href="">Забыли пароль?</a>
+            <a href="">Новая регистрация</a>
+          </div>
+        </form>
+      </div>
+      <div class="cart-button">
+        <button type="button">Пусто</button>
+        <span class="cart-icon"></span>
+      </div>
     </div>
-    <div class="cart-button">
-      <button type="button">Пусто</button>
-		</div>
+    <div class="header-contacts">
+      <span>с 10 до 20, ежедневно</span><br>
+      <a class="tel-header" href="tel:88124502525">8 812 450-25-25</a>
+    </div>
 		<ul class="breadcrumbs clear-list">
 			<li><a href="index.html">Главная</a></li>
 			<li><a href="">Каталог</a></li>
 			<li><a href="">Сливочное</a></li>
 		</ul>
-    <span>с 10 до 20, ежедневно</span><br>
-    <a class="tel-header" href="tel:88124502525">8 812 450-25-25</a>
 	</header>
 	<main>
 		<h1>Сливочное мороженое</h1>
@@ -100,7 +106,7 @@
 			</fieldset>
 			<button  class="filter-button" type="submit">Применить</button>
 		</form>
-		<section>
+		<section class="container">
 			<h2 class="visually-hidden" >Каталог мороженого</h2>
 			<ul class="catalog clear-list">
 				<li>
@@ -213,8 +219,8 @@
 			</ul>
 		</div>
 	</main>
-	<footer>
-		<ul class="social-buttons clear-list">
+	<footer class="footer container">
+    <ul class="social-buttons clear-list">
       <li><a class="social-icon facebook" href="" aria-label="Facebook"></a></li>
       <li><a class="social-icon vk" href="" aria-label="VK"></a></li>
       <li><a class="social-icon instagram" href="" aria-label="Instagram"></a></li>
@@ -222,13 +228,15 @@
     </ul>
     <ul class="footer-menu clear-list">
       <li><a href="">Для поставщиков</a></li>
-      <li><a href="">О производстве</a></li>
       <li><a href="">Наши документы</a></li>
+      <li><a href="">О производстве</a></li>
       <li><a href="">Экологические стандарты</a></li>
     </ul>
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="108" height="39" alt="Логотип разработчика"></a>
-    <span>Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
-	</footer>
+    <div class="copyright">
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="108" height="39" alt="Логотип разработчика"></a>
+      <span>Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</span>
+    </div>
+  </footer>
 </body>
 
 </html>
