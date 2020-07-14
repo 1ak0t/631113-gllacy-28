@@ -9,7 +9,11 @@
   --button-hover: #FBDED7;
   --button-active: #F6B5A5;
   --button-on-page: #D07058;
-
+  --input-bg: #D3D3D2;
+  --menu-active-link: #EDEDED;
+  --shadows-inset: #696969;
+  --underline: rgba(255,255,255,.2);
+  --smoke-brown: #F8F7F4;
   --general-white: #FFFFFF;
   --general-black: #000000;
 }
@@ -93,7 +97,7 @@ a {
   grid-template-columns: repeat(3,auto);
   column-gap: 10px;
   justify-self: end;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .header-contacts {
@@ -106,6 +110,10 @@ a {
   width: 154px;
   height: 65px;
   margin-top: 8px;
+}
+
+.logo-link {
+  line-height: 0;
 }
 
 .main-menu {
@@ -130,7 +138,7 @@ a {
 }
 
 .main-a span {
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid var(--underline);
 }
 
 .main-a:hover,
@@ -144,13 +152,13 @@ a {
 }
 
 .main-a:active {
-  background: #EDEDED;
-  box-shadow: inset 0px 2px 1px #696969;
+  background: var(--menu-active-link);
+  box-shadow: inset 0px 2px 1px var(--shadows-inset);
   border-radius: 26px;
 }
 
 .current-page-link {
-  background: #D07058;
+  background: var(--button-on-page);
   border-radius: 26px;
   padding: 7px 0;
 }
@@ -174,7 +182,7 @@ a {
 
 
 .current-submenu {
-  background: #D07058;
+  background: var(--button-on-page);
 }
 
 .sub-menu li {
@@ -253,18 +261,18 @@ a {
   position: absolute;
   top: 38px;
   left: -325px;
-  background: #F8F7F4;
+  background: var(--smoke-brown);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   padding: 20px 15px;
 }
 
-.search-form input[type="text"] {
+.search-form input[type='text'] {
   width: 311px;
   font-size: 14px;
   color: #999;
   line-height: 44px;
-  border: 1px solid #D3D3D2;
+  border: 1px solid var(--input-bg);
   border-radius: 4px;
   padding-left: 15px;
 }
@@ -282,7 +290,7 @@ a {
   display: inline-block;
 }
 
-.login-button{
+.login-button {
   font-family: inherit;
   font-size: 14px;
   line-height: 16px;
@@ -305,7 +313,7 @@ a {
   position: absolute;
   top: 38px;
   left: -188px;
-  background: #F8F7F4;
+  background: var(--smoke-brown);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   padding: 20px;
@@ -327,13 +335,13 @@ a {
   display: block;
 }
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.login-form input[type='email'],
+.login-form input[type='password'] {
   width: 241px;
   font-size: 14px;
   color: #999;
   line-height: 44px;
-  border: 1px solid #D3D3D2;
+  border: 1px solid var(--input-bg);
   border-radius: 4px;
   padding-left: 15px;
   margin-bottom: 20px;
@@ -393,6 +401,8 @@ a {
   background-color: var(--general-white);
   background-image: url(../img/icon-cart-active.svg);
   color: var(--general-black);
+  background-position: 16% 37%;
+  width: 118px;
 }
 
 .cart-button:hover,
@@ -411,7 +421,7 @@ a {
   top: 34px;
   left: -420px;
   width: 539px;
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
   padding: 20px 15px;
   color: var(--general-black);
   font-size: 13px;
@@ -425,7 +435,7 @@ a {
   margin-bottom: 20px;
 }
 
-.cart-product ul{
+.cart-product ul {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -441,7 +451,7 @@ a {
 }
 
 .cart-line {
-  width:100%;
+  width: 100%;
   height: 1px;
   background-color: #CACAC7;
 }
@@ -478,7 +488,7 @@ a {
 .cart-product button {
   width: 11px;
   height: 11px;
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
   background-image: url(../img/X.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -512,15 +522,18 @@ a {
 .breadcrumbs {
   grid-row: 2/3;
   grid-column: 1/3;
-  align-self: end;
+  align-self: center;
+  margin-bottom: -10px;
 }
 
 .breadcrumbs li {
   display: inline-block;
+  font-size: 14px;
 }
 
 .breadcrumbs a {
   border-bottom: 1px solid rgba(255,255,255,.2);
+  font-size: 14px;
 }
 
 .breadcrumbs li:nth-child(n+2)::before {
@@ -529,14 +542,23 @@ a {
   width: 6px;
   height: 6px;
   background: url(../img/breadcrumbs-icon.svg) center center no-repeat;
-  margin-left: 8px;
+  margin-left: 5px;
   margin-right: 8px;
   transform: translateY(-30%);
 }
 
+.page-name {
+  font-size: 35px;
+  line-height: 41px;
+  margin-top: 0;
+  margin-bottom: 11px;
+  position: relative;
+  top: -12px;
+}
+
 .slider {
   height: 209px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -664,9 +686,9 @@ button.active {
   display: flex;
   flex-wrap: wrap;
   width: 869px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
 }
 
 .filter input,
@@ -679,27 +701,34 @@ button.active {
 .filter-block {
   border: 0;
   padding: 0;
-  margin-right: 15px;
+  margin-right: 10px;
+  margin-bottom: 12px;
 }
 
 .filter-name {
   font-size: 14px;
   font-weight: normal;
-  padding-left: 20px;
+  padding-left: 16px;
   font: inherit;
   font-size: 14px;
-  margin-bottom: 1px;
+  line-height: 24px;
 }
 
 .filter-points {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 7px 19px;
+  padding-left: 14px;
+  padding-top: 10px;
   font-weight: 500;
   color: var(--general-white);
   height: 36px;
   box-sizing: border-box;
   display: flex;
+}
+
+.filter-adds {
+  margin-top: 4px;
+  padding-top: 7px;
 }
 
 .checkbox {
@@ -713,11 +742,12 @@ button.active {
   position: relative;
   padding-left: 33px;
   cursor: pointer;
-  margin-right: 15px;
+  font-size: 16px;
+  margin-right: 23px;
 }
 
 .checkbox + label:last-child {
-  margin-right: 0;
+  margin-right: 17px;
 }
 
 .checkbox + label:before {
@@ -760,13 +790,14 @@ button.active {
 
 .radio + label {
   position: relative;
-  padding-left: 28px;
-  margin-right: 15px;
+  padding-left: 34px;
+  margin-right: 18px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .radio + label:last-child {
-  margin-right: 0;
+  margin-right: 16px;
 }
 
 .radio + label::before {
@@ -795,16 +826,17 @@ button.active {
 }
 
 .filter-button {
-  font: inherit;
+  font-size: 16px;
   height: 36px;
   color: var(--general-white);
-  padding: 0 29px;
+  padding: 0 27px;
   border: 2px solid #FFFFFF;
   line-height: 30px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   position: relative;
   top: 23px;
+  margin-left: 5px;
 }
 
 .filter-cost {
@@ -819,20 +851,20 @@ button.active {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 63px;
+  left: 57px;
 }
 
-.price-control input[type="number"]::-webkit-outer-spin-button,
-.price-control input[type="number"]::-webkit-inner-spin-button {
+.price-control input[type='number']::-webkit-outer-spin-button,
+.price-control input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.price-control input[type="number"] {
+.price-control input[type='number'] {
   -moz-appearance: textfield;
 }
-.price-control input[type="number"]:hover,
-input[type="number"]:focus {
+.price-control input[type='number']:hover,
+input[type='number']:focus {
   -moz-appearance: number-input;
 }
 
@@ -841,12 +873,13 @@ input[type="number"]:focus {
   background-color: rgba(0, 0, 0, 0);
   border: 0;
   color: var(--general-white);
+  font-size: 14px;
 }
 
 .range-control {
   width: 218px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--underline);
   border-radius: 20px;
   position: relative;
   padding: 18px 21px;
@@ -862,7 +895,7 @@ input[type="number"]:focus {
 .bar {
   width: 100px;
   height: 2px;
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
 }
 
 .dot {
@@ -870,7 +903,7 @@ input[type="number"]:focus {
   height: 4px;
   padding: 0;
   background-color: var(--bg-color-green);
-  border: 8px solid #FFFFFF;
+  border: 8px solid var(--general-white);
   border-radius: 50%;
   position: absolute;
   top: 9px;
@@ -880,9 +913,9 @@ input[type="number"]:focus {
 
 .sort {
   margin-right: 15px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--underline);
   border-radius: 20px;
-  padding: 7px 19px;
+  padding: 7px 35px 7px 16px;
   font-weight: 500;
   color: var(--general-white);
   height: 36px;
@@ -891,6 +924,9 @@ input[type="number"]:focus {
   -moz-appearance: none;
   appearance: none;
   border: none;
+  background-image: url(../img/open-select.svg);
+  background-repeat: no-repeat;
+  background-position: 92% center;
 }
 
 .sort option {
@@ -901,6 +937,8 @@ input[type="number"]:focus {
 .sort:focus {
   color: var(--general-black);
   cursor: pointer;
+  background-image: url(../img/open-select-hover.svg);
+  background-color: var(--general-white);
 }
 
 .filter-button:hover,
@@ -911,7 +949,7 @@ input[type="number"]:focus {
 }
 
 .filter-button:active {
-  box-shadow: inset 0px 2px 1px #696969;
+  box-shadow: inset 0px 2px 1px var(--shadows-inset);
   border: 0;
   line-height: 36px;
 }
@@ -923,13 +961,13 @@ input[type="number"]:focus {
 }
 
 .catalog-title a {
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid var(--underline);
 }
 
 .catalog-item {
   width: 267px;
   position: relative;
-  margin-bottom: -30px;
+  margin-bottom: -37px;
   padding-bottom: 70px;
 }
 
@@ -938,7 +976,7 @@ input[type="number"]:focus {
 }
 
 .catalog-item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -6px;
   left: -13px;
@@ -946,7 +984,7 @@ input[type="number"]:focus {
   height: 100%;
   z-index: -1;
   display: none;
-  background: #FFFFFF;
+  background: var(--general-white);
   opacity: 0.2;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1001,13 +1039,13 @@ input[type="number"]:focus {
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  width: 26px;
+  width: 25px;
   height: 26px;
   text-align: center;
 }
 
 .row {
-  background: url(../img/icon-row.svg) center bottom no-repeat;
+  background: url(../img/icon-row.svg) right bottom no-repeat;
 }
 
 .row a {
@@ -1021,6 +1059,7 @@ input[type="number"]:focus {
 
 .catalog-nav {
   text-align: right;
+  margin-top: 32px;
 }
 
 .catalog-nav::after {
@@ -1028,12 +1067,12 @@ input[type="number"]:focus {
   display: block;
   width: 1146px;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--underline);
   margin-top: 30px;
 }
 
 .catalog-nav li:not(:first-child):not(:last-child):hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--underline);
   border-radius: 50%;
 }
 
@@ -1061,9 +1100,8 @@ input[type="number"]:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 40px;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
   position: relative;
-  top: -4px;
 }
 
 .features {
@@ -1078,6 +1116,7 @@ input[type="number"]:focus {
   grid-row: 1/2;
   grid-column: 1/3;
   box-sizing: border-box;
+  margin-top: 2px;
 }
 
 .features h2 {
@@ -1188,7 +1227,7 @@ input[type="number"]:focus {
 }
 
 .subscribe-block {
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
   border-radius: 16px;
   width: 548px;
   height: 210px;
@@ -1235,7 +1274,6 @@ input[type="number"]:focus {
   width: 100%;
   min-width: 1146px;
   margin: 0 auto;
-  top: -4px;
 }
 
 .maps-dot {
@@ -1301,7 +1339,7 @@ input[type="number"]:focus {
   height: 43px;
   border-radius: 70px;
   position: relative;
-  top: 8px;
+  top: 6px;
   margin-bottom: 10px;
 }
 
@@ -1357,7 +1395,7 @@ input[type="number"]:focus {
 }
 
 .footer-menu a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--underline);
   font-size: 13px;
 }
 
@@ -1380,7 +1418,7 @@ input[type="number"]:focus {
 
 .htmlacademy-link {
   display: inline-block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--underline);
 }
 
 .copyright {
@@ -1394,11 +1432,11 @@ input[type="number"]:focus {
 .modal-feedback {
   width: 477px;
   height: 471px;
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
   border-radius: 6px;
   position: fixed;
   top: 338px;
-  left:50%;
+  left: 50%;
   transform: translate(-50%,0);
   z-index: 5;
   padding: 20px 25px 27px 24px;
@@ -1422,7 +1460,7 @@ input[type="number"]:focus {
   font-size: 14px;
   color: #999;
   line-height: 44px;
-  border: 1px solid #D3D3D2;
+  border: 1px solid var(--input-bg);
   border-radius: 4px;
   margin-bottom: 20px;
   padding-left: 15px;
@@ -1446,7 +1484,7 @@ input[type="number"]:focus {
   width: 18px;
   height: 18px;
   background-image: url(../img/icon-x.svg);
-  background-color: #F8F7F4;
+  background-color: var(--smoke-brown);
   cursor: pointer;
 }
 
@@ -1497,7 +1535,7 @@ input[type="number"]:focus {
   }
 }
 
-iframe {
+.life-map {
   width: 100%;
   height: 430px;
   border: 0;
