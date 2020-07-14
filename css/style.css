@@ -1,33 +1,3 @@
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), 
-      url(../fonts/Roboto-Regular.woff2) format('woff2'),
-      url(../fonts/Roboto-Regular.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), 
-      url(../fonts/Roboto-Bold.woff2) format('woff2'),
-      url(../fonts/Roboto-Bold.woff) format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'),
-      url(../fonts/Roboto-Medium.woff2) format('woff2'),
-      url(../fonts/Roboto-Medium.woff) format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --bg-color-green: #849D8F;
   --bg-color-blue: #8996A6;
@@ -87,7 +57,7 @@ a {
 
  .general-background-2 {
   background-color: var(--bg-color-blue);
-  
+
  }
 
  .general-background-3 {
@@ -114,7 +84,7 @@ a {
 
 .header {
   display: grid;
-  grid-template-columns: 178px 1fr 1fr;
+  grid-template-columns: 166px 1fr 1fr;
   align-items: center;
 }
 
@@ -123,6 +93,7 @@ a {
   grid-template-columns: repeat(3,auto);
   column-gap: 10px;
   justify-self: end;
+  margin-top: 7px;
 }
 
 .header-contacts {
@@ -134,7 +105,7 @@ a {
 .logo {
   width: 154px;
   height: 65px;
-  margin: 8px;
+  margin-top: 8px;
 }
 
 .main-menu {
@@ -151,10 +122,15 @@ a {
   display: block;
   position: relative;
   padding: 7px 0;
+  margin-right: 6px;
 }
 
 .main-a {
   padding: 7px 13px;
+}
+
+.main-a span {
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .main-a:hover,
@@ -164,7 +140,7 @@ a {
   color: var(--general-black);
   background-color: var(--general-white);
   border-radius: 26px;
-  padding: 7px 13px 7px 13px; 
+  padding: 7px 13px 7px 13px;
 }
 
 .main-a:active {
@@ -226,7 +202,7 @@ a {
 .submenu-link:focus {
   color: var(--general-black);
   background: var(--button-hover);
-  border-radius: 0; 
+  border-radius: 0;
   line-height: 27px;
 }
 
@@ -237,7 +213,7 @@ a {
 .main-menu-link:hover .sub-menu,
 .main-menu-link:focus .sub-menu {
   display: block;
-} 
+}
 
 .catalog-button {
   width: 89px;
@@ -405,7 +381,7 @@ a {
   background-image: url(../img/icon-cart.svg);
   background-repeat: no-repeat;
   background-position: 20% 50%;
-  width: 122px;
+  width: 100px;
   height: 32px;
   border-radius: 20px;
   border: 0px;
@@ -520,10 +496,17 @@ a {
   color: var(--general-black);
 }
 
+.work-time {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  padding-left: 18px;
+}
+
 .tel-header {
   font-size: 22px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 34px;
 }
 
 .breadcrumbs {
@@ -537,8 +520,7 @@ a {
 }
 
 .breadcrumbs a {
-  text-decoration-line: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .breadcrumbs li:nth-child(n+2)::before {
@@ -549,11 +531,12 @@ a {
   background: url(../img/breadcrumbs-icon.svg) center center no-repeat;
   margin-left: 8px;
   margin-right: 8px;
+  transform: translateY(-30%);
 }
 
 .slider {
   height: 209px;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   position: relative;
 }
 
@@ -611,8 +594,8 @@ a {
 
 .slider-dot {
   position: absolute;
-  top: 166px;
-  left: 7px;
+  top: 164px;
+  left: 1px;
 }
 
 .slider-dot button {
@@ -623,6 +606,7 @@ a {
   border: 2px solid var(--general-white);
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  margin-right: 4px;
 }
 
 .slider-dot button:hover {
@@ -636,7 +620,7 @@ button.active {
 .stok {
   width: 560px;
   height: 229px;
-  padding: 16px;
+  padding: 16px 22px 22px 16px;
   border-radius: 16px;
   font-weight: bold;
   position: relative;
@@ -663,6 +647,7 @@ button.active {
 .stok p {
   font-size: 18px;
   line-height: 22px;
+  margin-top: 16px;
 }
 
 .stok-button {
@@ -703,7 +688,7 @@ button.active {
   padding-left: 20px;
   font: inherit;
   font-size: 14px;
-  margin-bottom: 7px;
+  margin-bottom: 1px;
 }
 
 .filter-points {
@@ -714,8 +699,7 @@ button.active {
   color: var(--general-white);
   height: 36px;
   box-sizing: border-box;
-  position: relative;
-  top: -6px;
+  display: flex;
 }
 
 .checkbox {
@@ -865,7 +849,6 @@ input[type="number"]:focus {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   position: relative;
-  top: -6px;
   padding: 18px 21px;
   box-sizing: border-box;
 }
@@ -904,6 +887,10 @@ input[type="number"]:focus {
   color: var(--general-white);
   height: 36px;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
 }
 
 .sort option {
@@ -935,11 +922,18 @@ input[type="number"]:focus {
   justify-content: space-between;
 }
 
+.catalog-title a {
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
 .catalog-item {
   width: 267px;
-  height: 402px;
   position: relative;
   margin-bottom: -30px;
+  padding-bottom: 70px;
+}
+
+.catalog-item:hover {
   z-index: 3;
 }
 
@@ -949,7 +943,7 @@ input[type="number"]:focus {
   top: -6px;
   left: -13px;
   width: 293px;
-  height: 402px;
+  height: 100%;
   z-index: -1;
   display: none;
   background: #FFFFFF;
@@ -982,10 +976,11 @@ input[type="number"]:focus {
 
 .price {
   position: absolute;
-  top: 216px;
+  top: 220px;
   left: 0;
   font-size: 45px;
   font-weight: bold;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .price i {
@@ -998,7 +993,7 @@ input[type="number"]:focus {
   font-weight: 500;
   line-height: 22px;
   text-align: center;
-  margin: 13px 0;
+  margin: 5px 0;
 }
 
 .catalog-nav li {
@@ -1057,13 +1052,18 @@ input[type="number"]:focus {
   font-weight: bold;
   border-radius: 50px;
   display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .cards-on-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
+  position: relative;
+  top: -4px;
 }
 
 .features {
@@ -1084,6 +1084,7 @@ input[type="number"]:focus {
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+  margin-bottom: 16px;
 }
 
 .features-item {
@@ -1098,7 +1099,7 @@ input[type="number"]:focus {
   margin: 0;
   padding-left: 55px;
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .features-item p:first-child::before {
@@ -1108,7 +1109,7 @@ input[type="number"]:focus {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -6px;
+  top: -8px;
   background-image: url(../img/icon-icecream.svg);
   background-repeat: no-repeat;
 }
@@ -1120,7 +1121,7 @@ input[type="number"]:focus {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -6px;
+  top: -9px;
   background-image: url(../img/icon-cow.svg);
   background-repeat: no-repeat;
 }
@@ -1132,7 +1133,7 @@ input[type="number"]:focus {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -6px;
+  top: -9px;
   background-image: url(../img/icon-foliage.svg);
   background-repeat: no-repeat;
 }
@@ -1144,7 +1145,7 @@ input[type="number"]:focus {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -6px;
+  top: -9px;
   background-image: url(../img/icon-temp.svg);
   background-repeat: no-repeat;
 }
@@ -1157,7 +1158,7 @@ input[type="number"]:focus {
   border-radius: 16px;
   color: var(--general-black);
   padding-left: 20px;
-  padding-top: 23px;
+  padding-top: 18px;
   box-sizing: border-box;
 }
 
@@ -1175,7 +1176,7 @@ input[type="number"]:focus {
 }
 
 .blog-item h3 {
-  margin-top: 15px;
+  margin-top: 3px;
 }
 
 .subscribe {
@@ -1194,11 +1195,12 @@ input[type="number"]:focus {
   margin:0 auto;
   position: relative;
   top: 5px;
-  padding: 29px 20px;
+  padding: 24px 20px;
   box-sizing: border-box;
 }
 
 .subscribe-block p{
+  margin-bottom: 40px;
   margin-top: 0;
 }
 
@@ -1210,6 +1212,7 @@ input[type="number"]:focus {
   box-sizing: border-box;
   border-radius: 6px;
   padding-left: 14px;
+  font-size: 16px;
 }
 
 .subscribe button {
@@ -1232,6 +1235,7 @@ input[type="number"]:focus {
   width: 100%;
   min-width: 1146px;
   margin: 0 auto;
+  top: -4px;
 }
 
 .maps-dot {
@@ -1242,20 +1246,30 @@ input[type="number"]:focus {
 
 .location {
   width: 303px;
-  height: 306px;
   color: var(--general-black);
   background-color: #FEFEFE;
   border-radius: 16px;
   position: absolute;
   top: 62px;
-  right: 27px;
+  right: 50%;
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
   padding-left: 25px;
-  padding-top: 20px;
-  padding-right: 53px;
+  padding-top: 16px;
+  padding-right: 47px;
   box-sizing: border-box;
+  padding-bottom: 30px;
+  transform: translateX(573px);
+}
+
+.location p {
+  margin-left: 0px;
+  margin-bottom: 21px;
+} 
+
+.location-connect {
+  margin-bottom: 5px;
 }
 
 .location address {
@@ -1264,9 +1278,11 @@ input[type="number"]:focus {
 
 .tel-location {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 19px;
   color: var(--general-black);
   font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .location span {
@@ -1284,14 +1300,17 @@ input[type="number"]:focus {
   width: 253px;
   height: 43px;
   border-radius: 70px;
+  position: relative;
+  top: 8px;
+  margin-bottom: 10px;
 }
 
 .footer {
   display: grid;
-  grid-template-columns: 267px 1fr 267px;
+  grid-template-columns: 267px 1fr 190px;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 16px;
   margin-bottom: 25px;
 }
 
@@ -1301,10 +1320,10 @@ input[type="number"]:focus {
 
 .social-icon {
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   padding: 3px;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .facebook {
@@ -1330,15 +1349,21 @@ input[type="number"]:focus {
 .footer-menu {
   display: grid;
   grid-template-columns: auto auto;
-  row-gap: 3px;
-  column-gap: 32px;
+  row-gap: 0px;
+  column-gap: 33px;
   justify-self: center;
   position: relative;
+  padding-right: 77px;
 }
 
 .footer-menu a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 13px;
+}
+
+.footer-menu li {
+  padding-left: 0px;
+  padding-top: 2px;
 }
 
 .footer-menu li:first-child::before {
@@ -1349,7 +1374,7 @@ input[type="number"]:focus {
   background: url(../img/heart.svg) center center no-repeat;
   margin-right: 7px;
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: -20px;
 }
 
@@ -1360,6 +1385,10 @@ input[type="number"]:focus {
 
 .copyright {
   display: grid;
+}
+
+.copyright span {
+  font-size: 12px;
 }
 
 .modal-feedback {
@@ -1430,7 +1459,7 @@ input[type="number"]:focus {
   padding: 14px 24px;
   display: inline-block;
   margin: 0;
-  margin-left:292px;
+  margin-left: 292px;
 }
 
 .modal-bg {
@@ -1447,7 +1476,7 @@ input[type="number"]:focus {
 .on {
   display: block;
   animation-name: bounce;
-  animation-duration: 0.6s ;
+  animation-duration: 0.6s;
 }
 
 @keyframes bounce {
